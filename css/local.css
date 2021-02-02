@@ -1,34 +1,9 @@
-/* override the font size on the sidebar to be a bit more mobile-friendly */
-.sidebar-about h1 {
-  font-size: 2rem;
-}
-
-/* only show the sidebar image on desktop */
-
-.sidebar-image-portrait {
-    display: none;
-}
-.sidebar-image-landscape {
-    display: inline;
-}
-#sitedesc {
-    display: none;
-}
-#siteshortdesc {
-    display: inline;
-}
-
+/* override the sidebar-sticky stuff to move it to the top */
 @media (min-width: 48em) {
-  .sidebar-image-landscape {
-      display: none;
-  }
-  .sidebar-image-portrait {
-      display: inline;
-  }
-  #sitedesc {
-      display: inline;
-  }
-  #siteshortdesc {
-      display: none;
+  .sidebar-sticky {
+    position: absolute;
+    right:  1rem;
+    top: 1rem;
+    left:   1rem;
   }
 }
