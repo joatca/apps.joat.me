@@ -3,21 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://apps.joat.me/about/</loc>
-    <lastmod>2020-08-17T14:43:36-04:00</lastmod>
+    <loc>https://apps.joat.me/page/about/</loc>
+    <lastmod>2020-02-02T16:43:36-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://apps.joat.me/privacy/</loc>
+    <loc>https://apps.joat.me/page/privacy/</loc>
     <lastmod>2020-02-02T10:00:36-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://apps.joat.me/categories/</loc>
+    <loc>https://apps.joat.me/</loc>
+    <lastmod>2020-02-02T16:43:36-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://apps.joat.me/</loc>
+    <loc>https://apps.joat.me/page/</loc>
+    <lastmod>2020-02-02T16:43:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://apps.joat.me/categories/</loc>
   </url>
   
   <url>
