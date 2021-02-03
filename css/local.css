@@ -7,3 +7,30 @@
     left:   1rem;
   }
 }
+
+/* override the font size on the sidebar to be a bit more mobile-friendly */
+.sidebar-about h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 48em) {
+  .sidebar-image-landscape {
+      display: none;
+  }
+  .sidebar-image-portrait {
+      display: inline;
+  }
+  #sitedesc {
+      display: inline;
+  }
+  #siteshortdesc {
+      display: none;
+  }
+}
+
+#sitedesc {
+    display: none;
+}
+#siteshortdesc {
+    display: inline;
+}
