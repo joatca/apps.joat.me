@@ -77,15 +77,15 @@
   <p>The Numbers Solver finds solutions for the &ldquo;Numbers&rdquo; game (as played on long-running game shows in the UK, France and Australia). Note that it doesn&rsquo;t let you <em>play</em> the numbers game, it just finds the best solutions.</p>
 <p>Brief rules for the Numbers game:</p>
 <ul>
-<li>6 &ldquo;source&rdquo; numbers are chosen from a pool of 24. The pool contains two each of all the digits from 1 to 10, plus one each of 25, 50, 75 and 100.</li>
+<li>Six &ldquo;source&rdquo; numbers are chosen from a pool of twnety-four. The pool contains two each of all the integers from 1 to 10, plus one each of 25, 50, 75 and 100.</li>
 <li>A three-digit &ldquo;target&rdquo; number is randomly selected (between 100 and 999)</li>
 <li>The target number must be reached using the source numbers and the basic numerical operations of addition, subtraction, multiplication and division.</li>
 <li>Each source number may only be used in one operation, and each intermediate result can also only be used in one later operation but it is <em>not</em> necessary to use all of the source numbers.</li>
 <li>No intermediate result may be negative</li>
 <li>All intermediate results must be integers</li>
-<li>Maximum points are scored for getting the exact target. Lower points are scored for getting up to 9 away. If the closest number attainable is 10 or more away, nothing is scored and there is considered to be no solution.</li>
+<li>Maximum points are scored for getting the exact target. Lower points are scored for getting up to nine away. If the closest number attainable is ten or more away, nothing is scored and there is considered to be no solution.</li>
 </ul>
-<p>For example, with the source numbers 1 3 7 6 8 3 and target number 250 one possible solution is 8×3=24; 24+1=25; 7+3=10; 25×10=250. Note that here we had 2 3&rsquo;s in the source list so 3 could be used twice. Currently won&rsquo;t let you deviate from the standard rules (you can&rsquo;t add source numbers outside of the restrictions above, and the app starts solving the puzzle as soon as you enter 6 source numbers and a valid target number). Thus it doesn&rsquo;t yet support &ldquo;scary numbers&rdquo; rounds.</p>
+<p>For example, with the source numbers 1 3 7 6 8 3 and target number 250 one possible solution is 8×3=24; 24+1=25; 7+3=10; 25×10=250. Note that here we had two 3&rsquo;s in the source list so 3 could be used twice. Currently won&rsquo;t let you deviate from the standard rules (you can&rsquo;t select source numbers outside of the restrictions above, and the app starts solving the puzzle as soon as you select six source numbers and a valid target number). Thus it doesn&rsquo;t yet support &ldquo;scary numbers&rdquo; rounds.</p>
 <p>The algorithm is basically exhaustive search with some simple trimming of the expression space for useless or disallowed operations. (A useless operation is, for example, 6÷1 since the result is one of the operands so doesn&rsquo;t accomplish anything.)
 It was written as a simple first <a href="https://flutter.dev/">Flutter</a> app; I already had a <a href="https://github.com/joatca/numbers">Crystal version</a> so it was easy to port the algorithm to Dart then focus on playing with the framework.</p>
 
