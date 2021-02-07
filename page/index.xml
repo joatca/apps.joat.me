@@ -15,7 +15,7 @@
       <guid>https://apps.joat.me/page/about/</guid>
       <description>This site documents my apps, written as hobby projects. All are open source and I don&amp;rsquo;t make money from them. The page also hosts my Privacy Policy, which is required for apps to be listed in most app stores.
 Technical notes This website is hosted by Github Pages
-Site last updated 2021-02-07 14:24:22 -0500</description>
+Site last updated 2021-02-07 14:32:55 -0500</description>
     </item>
     
     <item>
@@ -39,7 +39,7 @@ Site last updated 2021-02-07 14:24:22 -0500</description>
       <guid>https://apps.joat.me/page/numbers/</guid>
       <description>The Numbers Solver finds solutions for the &amp;ldquo;Numbers&amp;rdquo; game (as played on long-running game shows in the UK, France and Australia). Note that it doesn&amp;rsquo;t let you play the numbers game, it just finds the best solutions.
 Brief rules for the Numbers game:
- Six &amp;ldquo;source&amp;rdquo; numbers are chosen from a pool of twnety-four. The pool contains two each of all the integers from 1 to 10, plus one each of 25, 50, 75 and 100.</description>
+ Six &amp;ldquo;source&amp;rdquo; numbers are chosen from a pool of twenty-four. The pool contains two each of all the integers from 1 to 10, plus one each of 25, 50, 75 and 100.</description>
     </item>
     
   </channel>
