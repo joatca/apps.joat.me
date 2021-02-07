@@ -6,7 +6,7 @@
     <description>Recent content in Pages on Joat&#39;s Apps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 02 Feb 2020 16:43:36 -0400</lastBuildDate><atom:link href="https://apps.joat.me/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Feb 2021 19:59:11 -0500</lastBuildDate><atom:link href="https://apps.joat.me/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About This Site</title>
       <link>https://apps.joat.me/page/about/</link>
@@ -15,7 +15,7 @@
       <guid>https://apps.joat.me/page/about/</guid>
       <description>This site documents my apps, written as hobby projects. All are open source and I don&amp;rsquo;t make money from them. The page also hosts my Privacy Policy, which is required for apps to be listed in most app stores.
 Technical notes This website is hosted by Github Pages
-Last updated 2021-02-03 10:50:07 -0500</description>
+Last updated 2021-02-06 20:12:23 -0500</description>
     </item>
     
     <item>
@@ -29,6 +29,17 @@ Last updated 2021-02-03 10:50:07 -0500</description>
 &lt;li&gt;Data entered by you into the app is not sent to me or any third party.&lt;/li&gt;
 &lt;li&gt;My apps do not contain ads.&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Numbers</title>
+      <link>https://apps.joat.me/page/numbers/</link>
+      <pubDate>Sat, 06 Feb 2021 19:59:11 -0500</pubDate>
+      
+      <guid>https://apps.joat.me/page/numbers/</guid>
+      <description>The Numbers Solver finds solutions for the &amp;ldquo;Numbers&amp;rdquo; game (as played on long-running game shows in the UK, France and Australia). Note that it doesn&amp;rsquo;t let you play the numbers game, it just finds the best solutions.
+Brief rules for the Numbers game:
+ 6 &amp;ldquo;source&amp;rdquo; numbers are chosen from a pool of 24. The pool contains two each of all the digits from 1 to 10, plus one each of 25, 50, 75 and 100.</description>
     </item>
     
   </channel>
