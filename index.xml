@@ -14,8 +14,8 @@
       
       <guid>https://apps.joat.me/page/about/</guid>
       <description>This site documents my apps, written as hobby projects. All are open source and I don&amp;rsquo;t make money from them. The page also hosts my Privacy Policy, which is required for apps to be listed in most app stores.
-Technical notes This website is hosted by Github Pages
-Site last updated 2021-02-11 13:32:50 -0500</description>
+Technical notes This website was built using Hugo with the Hyde theme, and is hosted by Github Pages
+Site last updated 2021-02-11 13:35:04 -0500</description>
     </item>
     
     <item>
