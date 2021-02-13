@@ -88,11 +88,13 @@
 <p>For example, with the source numbers 1 3 7 6 8 3 and target number 250 one possible solution is 8×3=24; 24+1=25; 7+3=10; 25×10=250. Note that here we had two 3&rsquo;s in the source list so 3 could be used twice. The app won&rsquo;t let you deviate from the standard rules (you can&rsquo;t select source numbers outside of the restrictions above, and the app starts solving the puzzle as soon as you select six source numbers and a valid target number), so it doesn&rsquo;t yet support &ldquo;scary numbers&rdquo; rounds. The app only shows the best solutions (those closest to the target number) and <em>will</em> show solutions that would score no points if those are the best solutions. For example, if the source numbers are 1 2 3 4 5 6 then no solution is possible for any target number above 960, since that&rsquo;s the highest possible with those numbers (3+1=4; 4×2=8; 8×4=32; 32×5=160; 160×6=960), so for a target of 999 it will show that solution as the best.</p>
 <p>Source code is <a href="https://github.com/joatca/numbers_solver">on Github</a>. The algorithm is basically exhaustive
 search with some simple trimming of the expression space for useless or disallowed operations. (A useless
-operation is, for example, 6÷1 since the result is one of the operands so doesn&rsquo;t accomplish anything.)  It was
+operation is, for example, 6÷1: the result is one of the operands so doesn&rsquo;t result in a new number.)  It was
 written as a simple first <a href="https://flutter.dev/">Flutter</a> app; I already had a <a href="https://github.com/joatca/numbers">Crystal
 version</a> so it was easy to port the algorithm to Dart then focus on playing
 with the framework.</p>
 <p>UPDATE: in the process of testing this app I discovered that the Crystal solution above is both inefficient and wrong (i.e. doesn&rsquo;t find all possible solutions). Until I get a chance to update it the Dart code is the &ldquo;canonical&rdquo; algorithm.</p>
+<a href='https://play.google.com/store/apps/details?id=me.joat.numbers_solver&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+
 
 </div>
     </main>
