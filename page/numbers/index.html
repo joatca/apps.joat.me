@@ -74,7 +74,8 @@
     <div class="post">
   <h1>Numbers Game Solver</h1>
   
-  <p>The Numbers Solver finds solutions for the &ldquo;Numbers&rdquo; game (as played on long-running game shows in the UK, France and Australia). Note that it doesn&rsquo;t let you <em>play</em> the numbers game, it just finds the best solutions.</p>
+  <p><em>This page describes version 0.3.</em></p>
+<p>The Numbers Game Solver finds solutions for the &ldquo;Numbers&rdquo; game (as played on long-running game shows in the UK, France and Australia). Note that it doesn&rsquo;t let you <em>play</em> the numbers game, it just finds the best solutions.</p>
 <p>Brief rules for the Numbers game:</p>
 <ul>
 <li>Six &ldquo;source&rdquo; numbers are chosen from a pool of twenty-four. The pool contains two each of all the integers from 1 to 10, plus one each of 25, 50, 75 and 100.</li>
@@ -85,7 +86,9 @@
 <li>All intermediate results must be integers</li>
 <li>Maximum points are scored for getting the exact target. Lower points are scored for getting up to nine away. If the closest number attainable is ten or more away, nothing is scored and there is considered to be no solution.</li>
 </ul>
-<p>For example, with the source numbers 1 3 7 6 8 3 and target number 250 one possible solution is 8×3=24; 24+1=25; 7+3=10; 25×10=250. Note that here we had two 3&rsquo;s in the source list so 3 could be used twice. The app won&rsquo;t let you deviate from the standard rules (you can&rsquo;t select source numbers outside of the restrictions above, and the app starts solving the puzzle as soon as you select six source numbers and a valid target number), so it doesn&rsquo;t yet support &ldquo;scary numbers&rdquo; rounds. The app only shows the best solutions (those closest to the target number) and <em>will</em> show solutions that would score no points if those are the best solutions. For example, if the source numbers are 1 2 3 4 5 6 then no solution is possible for any target number above 960, since that&rsquo;s the highest possible with those numbers (3+1=4; 4×2=8; 8×4=32; 32×5=160; 160×6=960), so for a target of 999 it will show that solution as the best.</p>
+<p>For example, with the source numbers 1 3 7 6 8 3 and target number 250 one possible solution is 8×3=24; 24+1=25; 7+3=10; 25×10=250. Note that here we had two 3&rsquo;s in the source list so 3 could be used twice.</p>
+<p>The app has two modes. In &ldquo;Normal&rdquo; mode it provides selectable chips that won&rsquo;t let you deviate from the standard rules (you can&rsquo;t select source numbers outside of the restrictions above). In &ldquo;scary&rdquo; mode the app instead offers numeric entry fields where you can choose any three-digit numbers. In both cases the app starts solving the game as soon as you select six source numbers and a valid target number.</p>
+<p>It only shows the best solutions (those closest to the target number) and <em>will</em> show solutions that would score no points if those are the best solutions. For example, if the source numbers are 1 2 3 4 5 6 then no solution is possible for any target number above 960, since that&rsquo;s the highest possible with those numbers (3+1=4; 4×2=8; 8×4=32; 32×5=160; 160×6=960), so for a target of 999 it will show that solution as the best.</p>
 <p>Source code is <a href="https://github.com/joatca/numbers_solver">on Github</a>. The algorithm is basically exhaustive
 search with some simple trimming of the expression space for useless or disallowed operations. (A useless
 operation is, for example, 6÷1: the result is one of the operands so doesn&rsquo;t result in a new number.)  It was
