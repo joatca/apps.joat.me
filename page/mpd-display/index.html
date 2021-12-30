@@ -121,6 +121,7 @@ GCC0X010101010M8       device usb:1-1.2 product:mustang model:KFMUWI device:must
 <li>Make sure your player is paused or stopped then copy the wake-up script installer to the Raspberry Pi, or to somewhere visible to the Raspberry Pi and run it. If the script was copied to the <code>pi</code> user then this is sufficient: <code>bash install-wakeup-mpd</code>. This will install the script, a systemd service to control it, and enable and start it. By default the script assumes no password, and a swipe from bottom to top to unlock the display. You may have to edit the script to set the correct actions for your tablet. A fairly easy way to edit it is with <code>nano /home/pi/wakeup-mpd-display.sh</code>. Once you are finished editing run <code>systemctl --user restart wakeup-mpd-display</code>.</li>
 <li>With the tablet connected by USB, start playback using your phone or computer. Within a couple of seconds the tablet screen should unlock and the app will start. <code>adb</code> can be a bit flaky sometimes so the script sometimes doesn&rsquo;t work. Any suggestions on how to improve reliability are welcome.</li>
 </ul>
+<p>The source code is <a href="https://github.com/joatca/mpd-display">on Github</a>.</p>
 
 </div>
     </main>
