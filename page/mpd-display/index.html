@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca" lang="en-ca">
+<head>
+  <meta charset="utf-8" />
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.91.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MPD Display &middot; Hobby Apps</title>
+
+  <meta property="og:title" content="MPD Display | Hobby Apps" />
+  <meta name="twitter:title" content="MPD Display | Hobby Apps" />
+  <meta itemprop="name" content="MPD Display | Hobby Apps" />
+  <meta name="application-name" content="MPD Display | Hobby Apps" />
+  <meta property="og:site_name" content="" />
+
+  <meta name="description"
+        content="MPD Display ( / A web page for some of my hobby apps)" />
+
+  <base href="https://apps.joat.me/page/mpd-display/">
+  <link rel="canonical" href="https://apps.joat.me/page/mpd-display/" itemprop="url" /> 
+  <meta name="url" content="https://apps.joat.me/page/mpd-display/" />
+  <meta name="twitter:url" content="https://apps.joat.me/page/mpd-display/" /> 
+  <meta property="og:url" content="https://apps.joat.me/page/mpd-display/" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://apps.joat.me/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://apps.joat.me/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://apps.joat.me/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://apps.joat.me/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://apps.joat.me/css/local.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" layout-reverse">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://apps.joat.me/"><h1>Hobby Apps</h1></a>
+      <p class="lead" id="sitedesc">
+      
+      </p>
+      <p class="lead" id="sitedesc">
+      <i>A web page for some of my hobby apps</i>
+      </p>
+      <p class="lead" id="siteshortdesc">
+      
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/page/about"> About </a></li><li><a href="/page/mpd-display"> MPD Display </a></li><li><a href="/page/numbers"> Numbers Game Solver </a></li><li><a href="/page/privacy"> Privacy Policy </a></li>
+      </ul>
+    </nav>
+
+    <p>CC BY-SA 3.0</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>MPD Display</h1>
+  
+  <p><em>This page describes version 0.1</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>MPD Display is a &ldquo;now playing&rdquo; display for the <a href="https://moodeaudio.org/">moOde audio player</a>, other similar Raspberry-Pi-based music players, or any computer running the <a href="https://www.musicpd.org/">Music Player Daemon</a>. It is intended to be used on a cheap/old/unused Android tablet and to be easily readable at variety of distances. Below is a screenshot, however it looks much cooler when the tablet is on top of your stereo cabinet!</p>
+<p><img src="/img/mpd-display-screenshot.png" alt="Screenshot"></p>
+<p>The design philosophy is:</p>
+<ul>
+<li>Show what&rsquo;s playing, readable at a distance</li>
+<li>Fit elegantly into a stereo rack</li>
+<li>No album art</li>
+<li>Avoid horizontal &ldquo;marquee&rdquo; scrolling</li>
+</ul>
+<p>Top row controls are Progress, Previous Track, Play/Pause, Next Track, Appearance, Server Settings and &ldquo;About&rdquo; screen. Track title is first, then other information (which scrolls vertically if there isn&rsquo;t enough space). There are 4 font themes each with a light and dark variant. The font size is set to be clearly legible from about 4 metres (12 feet) but can be tuned up and down for different distances and screen sizes. As well as the control buttons, tapping on the centre half of the screen toggles pause, tapping left or right skips to the previous or next track.</p>
+<p>Pen icon means &ldquo;Composer&rdquo;, piano icon is &ldquo;Performer&rdquo; or &ldquo;Artist&rdquo; (depending on context) and vinyl icon is &ldquo;Album&rdquo;. Multi-value tags are supported. Tag your music library with <a href="https://xiph.org/vorbis/doc/v-comment.html">the recommended Vorbis tags</a> for best results. In particular for classical music use &ldquo;artist&rdquo; for the composer and &ldquo;performer&rdquo; for the orchestra/conductor/players. The &ldquo;composer&rdquo; tag is also supported.</p>
+<p>The screenshot above is from the author&rsquo;s <a href="https://www.amazon.com/Amazon-Fire-Tablet-Family/b?ie=UTF8&amp;node=6669703011">7&quot; Kindle Fire</a> but any Android tablet <a href="https://docs.flutter.dev/development/tools/sdk/release-notes/supported-platforms">supported by Flutter</a> should work (&gt;= Android 4.4, although &gt;= 4.1 might work). Larger tablets will work fine. Smaller devices like phones may work if you adjust the font size to suit and have good enough eyesight.</p>
+<p>The app works best if you put the tablet in developer mode, connect it to the Raspberry Pi/computer, and use a supplied script to automatically unlock the screen and launch the app when playback begins. Here&rsquo;s an overview diagram for moOde:
+<img src="/img/mpd-display-diagram.png" alt="Block Diagram"></p>
+<h2 id="required-hardware">Required Hardware</h2>
+<ul>
+<li>A tablet (or phone).</li>
+<li>A tablet stand. The author uses <a href="https://www.amazon.ca/gp/product/B07B8J2Y4F/">one of these</a> but anything that can hold the tablet in a readable position is fine.</li>
+<li>A Raspberry Pi or other computer running MPD.</li>
+<li>A USB charge/sync cable compatible with your tablet</li>
+</ul>
+<h2 id="setup-summary">Setup Summary</h2>
+<ul>
+<li>Factory-reset your tablet and when you set it up don&rsquo;t use any important accounts, especially not your main Google (or Amazon) account. Create a dummy account if required. This is because the wakeup script must be able to unlock the device without interaction. If it or the Raspberry Pi are stolen your passwords will be compromised.</li>
+<li>Set the tablet display timeout to your preference. While playing MPD Display will keep the screen turned on so this mainly affects how long until the screen turns off when you pause or stop playback.</li>
+<li>Enable developer mode on the tablet. <a href="https://developer.android.com/studio/debug/dev-options">Generic Android Instructions</a> / <a href="https://developer.amazon.com/docs/fire-tablets/connecting-adb-to-device.html#step-1-enable-developer-options">Kindle Fire instructions</a>. Don&rsquo;t connect the tablet to USB yet.</li>
+<li>If possible, <a href="https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address">assign a static IP</a> to your Raspberry Pi on your router, then reboot it. This improves the chances that the tablet will always be able to find it on the network.</li>
+<li>Enable SSH on the Raspberry Pi. This is enabled by default in moOde, with <a href="https://github.com/moode-player/moode/blob/master/www/setup.txt">a default username and password</a>. It must be <a href="https://phoenixnap.com/kb/enable-ssh-raspberry-pi">manually enabled on Raspbian</a>. For all other Linux systems it is almost certainly enabled by default.</li>
+<li>Figure out the default username and password. For moOde this is <code>pi</code> and <code>moodeaudio</code>. For the rest of this document I&rsquo;ll assume you&rsquo;re using moOde. Adjust instructions if your setup is different.</li>
+<li>SSH to the Raspberry Pi and install the <a href="https://developer.android.com/studio/command-line/adb">Android Debug Bridge</a>: <code>sudo apt-get install adb</code>. The version included with the operating system is fine, you don&rsquo;t need the full Android development toolkit.</li>
+<li><a href="https://developer.android.com/studio/command-line/adb#Enabling">Enable adb debugging</a> on the tablet.</li>
+<li>Connect the tablet to the Raspberry Pi with the USB cable. A notification or dialog will appear asking you to authorize the Raspberry Pi. Be sure you authorize it before proceeding.</li>
+<li>On the Raspberry Pi, run <code>adb devices -l</code>. It should list exactly one device. For my Kindle Fire it looks something like this:</li>
+</ul>
+<pre tabindex="0"><code>pi@music:~ $ adb devices -l
+List of devices attached
+GCC0X010101010M8       device usb:1-1.2 product:mustang model:KFMUWI device:mustang transport_id:9
+</code></pre><ul>
+<li>Copy the app APK file to the Raspberry Pi or to somewhere visible to the Raspberry Pi then install it to the tablet. If the APK was copied to the <code>pi</code> user then this is sufficient: <code>adb install mpd-display-0.1.apk</code>.</li>
+<li>Manually open MPD Display on the tablet. By default it will try to connect to a server called &ldquo;music&rdquo; on the default port of 6600. Your Raspberry Pi will likely have a different name or IP address. Tap the connection button top-right and enter the correct name or IP address. You probably won&rsquo;t need to change the port number from the default (6600). MPD Display should connect within a few seconds. If your player is stopped with an empty queue it will show only the server name. If it is paused or playing you&rsquo;ll see the current track.</li>
+<li>Make sure your player is paused or stopped then copy the wake-up script installer to the Raspberry Pi, or to somewhere visible to the Raspberry Pi and run it. If the script was copied to the <code>pi</code> user then this is sufficient: <code>bash install-wakeup-mpd</code>. This will install the script, a systemd service to control it, and enable and start it. By default the script assumes no password, and a swipe from bottom to top to unlock the display. You may have to edit the script to set the correct actions for your tablet. A fairly easy way to edit it is with <code>nano /home/pi/wakeup-mpd-display.sh</code>. Once you are finished editing run <code>systemctl --user restart wakeup-mpd-display</code>.</li>
+<li>With the tablet connected by USB, start playback using your phone or computer. Within a couple of seconds the tablet screen should unlock and the app will start. <code>adb</code> can be a bit flaky sometimes so the script sometimes doesn&rsquo;t work. Any suggestions on how to improve reliability are welcome.</li>
+</ul>
+
+</div>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

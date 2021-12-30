@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://apps.joat.me/page/about/</loc>
     <lastmod>2020-02-02T16:43:36-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://apps.joat.me/page/privacy/</loc>
     <lastmod>2020-02-02T10:00:36-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://apps.joat.me/</loc>
-    <lastmod>2021-02-06T19:59:11-05:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-12-30T15:49:30-05:00</lastmod>
+  </url><url>
+    <loc>https://apps.joat.me/page/mpd-display/</loc>
+    <lastmod>2021-12-30T15:49:30-05:00</lastmod>
+  </url><url>
+    <loc>https://apps.joat.me/page/</loc>
+    <lastmod>2021-12-30T15:49:30-05:00</lastmod>
+  </url><url>
     <loc>https://apps.joat.me/page/numbers/</loc>
     <lastmod>2021-02-06T19:59:11-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://apps.joat.me/page/</loc>
-    <lastmod>2021-02-06T19:59:11-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://apps.joat.me/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://apps.joat.me/tags/</loc>
   </url>
-  
 </urlset>
