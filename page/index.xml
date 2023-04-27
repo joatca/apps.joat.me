@@ -15,7 +15,7 @@
       <guid>https://apps.joat.me/page/about/</guid>
       <description>This site documents my apps, written as hobby projects. All are open source and I don&amp;rsquo;t make money from them. The page also hosts my Privacy Policy, which is required for apps to be listed in most app stores.
 Technical notes This website was built using Hugo with the Hyde theme, and is hosted by Github Pages
-Site last updated 2023-04-27 13:21:02 -0400 </description>
+Site last updated 2023-04-27 13:22:02 -0400 </description>
     </item>
     
     <item>
@@ -38,7 +38,8 @@ Site last updated 2023-04-27 13:21:02 -0400 </description>
       
       <guid>https://apps.joat.me/page/mpd-display/</guid>
       <description>This page describes version 0.1
-Introduction MPD Display is a &amp;ldquo;now playing&amp;rdquo; display for the moOde audio player, other similar Raspberry-Pi-based music players, or any computer running the Music Player Daemon. It is intended to be used on a cheap/old/unused Android tablet and to be easily readable at variety of distances. Below is a screenshot, however it looks much cooler when the tablet is on top of your stereo cabinet!</description>
+Introduction MPD Display is a &amp;ldquo;now playing&amp;rdquo; display for the moOde audio player, other similar Raspberry-Pi-based music players, or any computer running the Music Player Daemon. It is intended to be used on a cheap/old/unused Android tablet and to be easily readable at variety of distances.
+It is also intended for use with your own local music library - I&amp;rsquo;ve no idea what it will do if you are streaming a radio station because I never do that.</description>
     </item>
     
     <item>
