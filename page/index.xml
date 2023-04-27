@@ -15,7 +15,7 @@
       <guid>https://apps.joat.me/page/about/</guid>
       <description>This site documents my apps, written as hobby projects. All are open source and I don&amp;rsquo;t make money from them. The page also hosts my Privacy Policy, which is required for apps to be listed in most app stores.
 Technical notes This website was built using Hugo with the Hyde theme, and is hosted by Github Pages
-Site last updated 2023-04-27 13:29:52 -0400 </description>
+Site last updated 2023-04-27 13:39:53 -0400 </description>
     </item>
     
     <item>
@@ -24,10 +24,11 @@ Site last updated 2023-04-27 13:29:52 -0400 </description>
       <pubDate>Sun, 02 Feb 2020 10:00:36 -0400</pubDate>
       
       <guid>https://apps.joat.me/page/privacy/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;My apps do not collect personal data.&lt;/li&gt;
-&lt;li&gt;My apps do not send data to me or to any third party.&lt;/li&gt;
-&lt;li&gt;My apps do not contain ads.&lt;/li&gt;
+      <description>&lt;p&gt;My apps do not:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;collect personal data&lt;/li&gt;
+&lt;li&gt;send data to me or to any third party&lt;/li&gt;
+&lt;li&gt;contain ads&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
