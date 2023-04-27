@@ -5,7 +5,7 @@
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.91.2" />
+  <meta name="generator" content="Hugo 0.111.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,7 +107,7 @@
 <li>If possible, <a href="https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address">assign a static IP</a> to your Raspberry Pi on your router, then reboot it. This improves the chances that the tablet will always be able to find it on the network.</li>
 <li>Enable SSH on the Raspberry Pi. This is enabled by default in moOde, with <a href="https://github.com/moode-player/moode/blob/master/www/setup.txt">a default username and password</a>. It must be <a href="https://phoenixnap.com/kb/enable-ssh-raspberry-pi">manually enabled on Raspbian</a>. For all other Linux systems it is almost certainly enabled by default.</li>
 <li>Figure out the default username and password. For moOde this is <code>pi</code> and <code>moodeaudio</code>. For the rest of this document I&rsquo;ll assume you&rsquo;re using moOde. Adjust instructions if your setup is different.</li>
-<li>SSH to the Raspberry Pi and install the <a href="https://developer.android.com/studio/command-line/adb">Android Debug Bridge</a>: <code>sudo apt-get install adb</code>. The version included with the operating system is fine, you don&rsquo;t need the full Android development toolkit.</li>
+<li>SSH to the Raspberry Pi and install the <a href="https://developer.android.com/studio/command-line/adb">Android Debug Bridge</a>: <code>sudo apt install adb</code>.</li>
 <li><a href="https://developer.android.com/studio/command-line/adb#Enabling">Enable adb debugging</a> on the tablet.</li>
 <li>Connect the tablet to the Raspberry Pi with the USB cable. A notification or dialog will appear asking you to authorize the Raspberry Pi. Be sure you authorize it before proceeding.</li>
 <li>On the Raspberry Pi, run <code>adb devices -l</code>. It should list exactly one device. For my Kindle Fire it looks something like this:</li>
