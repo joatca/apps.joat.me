@@ -76,8 +76,7 @@
   
   <p><em>This page describes version 0.2</em></p>
 <h2 id="introduction">Introduction</h2>
-<p>MPD Display is a &ldquo;now playing&rdquo; display for the <a href="https://moodeaudio.org/">moOde audio player</a>, other similar Raspberry-Pi-based music players, or any computer running the <a href="https://www.musicpd.org/">Music Player Daemon</a>. It is intended to be used on a cheap/old/unused Android tablet and to be easily readable at variety of distances.</p>
-<p>It is also intended for use with your own local music library but also works if you are streaming a radio station.</p>
+<p>Do you play your music collection on the <a href="https://moodeaudio.org/">moOde audio player</a> (or any other <a href="https://www.musicpd.org/">MPD</a>-based music server)? Do you have an old, unused Android tablet or phone gathering dust? Use <em>MPD Display</em> as a &ldquo;now playing&rdquo; screen, much simpler and cheaper than Raspberry Pi screen and case combo, and with no assembly required other than connecting a USB cable and placing the tablet on a stand.</p>
 <p>Here are some screenshots from the author&rsquo;s <a href="https://www.amazon.com/Amazon-Fire-Tablet-Family/b?ie=UTF8&amp;node=6669703011">7&quot; Kindle Fire</a>, however it looks much cooler when the tablet is on top of your stereo cabinet!</p>
 <p><figure><img src="/img/baroque-parchment.png"
          alt="Baroque font with Parchment colour theme"/><figcaption>
@@ -91,7 +90,7 @@
         </figcaption>
 </figure>
 
-<figure><img src="/img//standard-gold.png"
+<figure><img src="/img/standard-gold.png"
          alt="Standard font with gold colour theme"/><figcaption>
             <p>Standard font with gold colour theme</p>
         </figcaption>
@@ -116,9 +115,9 @@
 <li>No album art</li>
 <li>Avoid horizontal &ldquo;marquee&rdquo; scrolling</li>
 </ul>
-<p>Top row controls are Progress, Previous Track, Play/Pause, Next Track, Appearance, Server Settings and &ldquo;About&rdquo; screen. Track title is first, then other information (which scrolls vertically if there isn&rsquo;t enough space). There are 4 font themes each with a light and dark variant. The font size is set to be clearly legible from about 4 metres (12 feet) but can be tuned up and down for different distances and screen sizes. As well as the control buttons, tapping on the centre half of the screen toggles pause, tapping left or right skips to the previous or next track.</p>
+<p>Top row controls are Progress, Previous Track, Play/Pause, Next Track, Appearance, Server Settings and &ldquo;About&rdquo; screen. Track title is first, then other information (which scrolls vertically if there isn&rsquo;t enough space). There are 5 font themes and 7 colour themes giving 35 possible looks. The font size is set to be clearly legible from about 4 metres (12 feet) by default but can be tuned up and down for different distances and screen sizes. As well as the control buttons, tapping on the centre half of the screen toggles pause, tapping left or right skips to the previous or next track.</p>
 <p>Pen icon means &ldquo;Composer&rdquo;, piano icon is &ldquo;Performer&rdquo; or &ldquo;Artist&rdquo; (depending on context) and vinyl icon is &ldquo;Album&rdquo;. Multi-value tags are supported. Tag your music library with <a href="https://xiph.org/vorbis/doc/v-comment.html">the recommended Vorbis tags</a> for best results. In particular for classical music use &ldquo;artist&rdquo; for the composer and &ldquo;performer&rdquo; for the orchestra/conductor/players. The &ldquo;composer&rdquo; tag is also supported.</p>
-<p>Although the screenshot above is from a 7&quot; Kindle Fire any Android tablet <a href="https://docs.flutter.dev/reference/supported-platforms">supported by Flutter</a> should work (&gt;= Android 5, although &gt;= 4.4 might work). Larger tablets will work fine. Smaller devices like phones may work if you adjust the font size to suit and have good enough eyesight.</p>
+<p>Although the screenshots above are from a 7&quot; Kindle Fire any Android tablet <a href="https://docs.flutter.dev/reference/supported-platforms">supported by Flutter</a> should work (&gt;= Android 5, although &gt;= 4.4 might work). Larger tablets will work fine. Smaller devices like phones may work if you adjust the font size to suit and have good enough eyesight.</p>
 <p>The app works best if you put the tablet in developer mode, connect it to the Raspberry Pi/computer, and use a supplied script to automatically unlock the screen and launch the app when playback begins. Here&rsquo;s an overview diagram for moOde:
 <figure><img src="/img/mpd-display-diagram.png"
          alt="Overview Diagram"/><figcaption>
@@ -128,16 +127,17 @@
 </p>
 <h2 id="required-hardware">Required Hardware</h2>
 <ul>
+<li>A Raspberry Pi running moOdeaudio or other computer running MPD.</li>
 <li>A tablet (or phone).</li>
+<li>A WiFi connection that allows connection to the Pi.</li>
+<li>A USB charge/sync cable compatible with your tablet (this both keeps the tablet charged and unlocks the screen automatically when playback starts)</li>
 <li>A tablet stand. The author uses <a href="https://www.amazon.ca/gp/product/B07B8J2Y4F/">one of these</a> but anything that can hold the tablet in a readable position is fine.</li>
-<li>A Raspberry Pi or other computer running MPD.</li>
-<li>A USB charge/sync cable compatible with your tablet</li>
 </ul>
 <h2 id="required-software">Required Software</h2>
 <p>The APK file and wakeup script installer discussed below, as well as the full source code, can be downloaded from the <a href="https://github.com/joatca/mpd-display/releases/tag/v0.2">release page for version 0.2</a>.</p>
 <h2 id="setup-summary">Setup Summary</h2>
 <ul>
-<li>Factory-reset your tablet and when you set it up don&rsquo;t use any important accounts, especially not your main Google (or Amazon) account. Create a dummy account if required. This is because the wakeup script must be able to unlock the device without interaction. If it or the Raspberry Pi are stolen your accounts will be compromised.</li>
+<li>Factory-reset your tablet and when you set it up and connect it to WiFi don&rsquo;t use any important accounts, especially not your main Google (or Amazon) account. Create a dummy account if required. This is because the wakeup script must be able to unlock the device without interaction. If it or the Raspberry Pi are stolen your accounts will be compromised.</li>
 <li>Set the tablet display timeout to your preference. While playing MPD Display will keep the screen turned on so this mainly affects how long until the screen turns off when you pause or stop playback.</li>
 <li>Enable developer mode on the tablet. <a href="https://developer.android.com/studio/debug/dev-options">Generic Android Instructions</a> / <a href="https://developer.amazon.com/docs/fire-tablets/connecting-adb-to-device.html#step-1-enable-developer-options">Kindle Fire instructions</a>. Don&rsquo;t connect the tablet to USB yet.</li>
 <li>If possible, <a href="https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address">assign a static IP</a> to your Raspberry Pi on your router, then reboot it. This improves the chances that the tablet will always be able to find it on the network.</li>
