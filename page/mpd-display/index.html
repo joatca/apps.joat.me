@@ -76,47 +76,29 @@
   
   <p><em>This page describes version 0.2</em></p>
 <h2 id="introduction">Introduction</h2>
-<p>Do you play your music collection on the <a href="https://moodeaudio.org/">moOde audio player</a> (or any other <a href="https://www.musicpd.org/">MPD</a>-based music server)? Do you have an old, unused Android tablet or phone gathering dust? Use <em>MPD Display</em> as a &ldquo;now playing&rdquo; screen, much simpler and cheaper than Raspberry Pi screen and case combo, and with no assembly required other than connecting a USB cable and placing the tablet on a stand.</p>
-<p>Here are some screenshots from the author&rsquo;s <a href="https://www.amazon.com/Amazon-Fire-Tablet-Family/b?ie=UTF8&amp;node=6669703011">7&quot; Kindle Fire</a>, however it looks much cooler when the tablet is on top of your stereo cabinet!</p>
-<p><figure><img src="/img/baroque-parchment.png"
-         alt="Baroque font with Parchment colour theme"/><figcaption>
-            <p>Baroque font with Parchment colour theme</p>
+<ul>
+<li>Do you play your music collection or stream radio stations on the <a href="https://moodeaudio.org/">moOde audio player</a> (or any other <a href="https://www.musicpd.org/">MPD</a>-based music server)?</li>
+<li>Do you miss being able to see what&rsquo;s playing on a display in your stereo rack without having to look at your phone, like expensive commercial music streamers, or the good old days of CD players?</li>
+<li>Do you have an unused Android tablet or phone gathering dust, or the budget to buy a cheap, entry-level tablet?</li>
+</ul>
+<p>Use <em>MPD Display</em> as a &ldquo;now playing&rdquo; screen, simpler than building a Raspberry Pi with a built-in screen, much cheaper than a dedicated music streamer, more elegant than playing from your TV or computer, and easy to read across a room. No assembly required other than connecting a USB cable and placing the tablet on a stand, and only minor technical fiddling to make it work automatically.</p>
+<p>This is what it looks like on the author&rsquo;s <a href="https://www.amazon.com/Amazon-Fire-Tablet-Family/b?ie=UTF8&amp;node=6669703011">7&quot; Kindle Fire</a> playing a track from a local library, however the animation is a lot smoothing than this GIF image and it looks much nicer when the tablet is on top of your stereo cabinet.</p>
+<figure><img src="/img/mpdd.gif"
+         alt="Baroque font style with Gold colour theme"/><figcaption>
+            <p>Baroque font style with Gold colour theme</p>
         </figcaption>
 </figure>
 
-<figure><img src="/img/baroque-parchment-2.png"
-         alt="Baroque with Parchment after scrolling"/><figcaption>
-            <p>Baroque with Parchment after scrolling</p>
-        </figcaption>
-</figure>
-
-<figure><img src="/img/standard-gold.png"
-         alt="Standard font with gold colour theme"/><figcaption>
-            <p>Standard font with gold colour theme</p>
-        </figcaption>
-</figure>
-
-<figure><img src="/img/techno-nightsky.png"
-         alt="Techno font with Nightsky colour theme"/><figcaption>
-            <p>Techno font with Nightsky colour theme</p>
-        </figcaption>
-</figure>
-
-<figure><img src="/img/matrix-vfd.png"
-         alt="Matrix font with VFD colour theme"/><figcaption>
-            <p>Matrix font with VFD colour theme</p>
-        </figcaption>
-</figure>
-</p>
 <p>The design philosophy is:</p>
 <ul>
 <li>Show what&rsquo;s playing, readable at a distance</li>
 <li>Fit elegantly into a stereo rack</li>
 <li>No album art</li>
-<li>Avoid horizontal &ldquo;marquee&rdquo; scrolling</li>
+<li>No horizontal &ldquo;marquee&rdquo; scrolling</li>
 </ul>
-<p>Top row controls are Progress, Previous Track, Play/Pause, Next Track, Appearance, Server Settings and &ldquo;About&rdquo; screen. Track title is first, then other information (which scrolls vertically if there isn&rsquo;t enough space). There are 5 font themes and 7 colour themes giving 35 possible looks. The font size is set to be clearly legible from about 4 metres (12 feet) by default but can be tuned up and down for different distances and screen sizes. As well as the control buttons, tapping on the centre half of the screen toggles pause, tapping left or right skips to the previous or next track.</p>
-<p>Pen icon means &ldquo;Composer&rdquo;, piano icon is &ldquo;Performer&rdquo; or &ldquo;Artist&rdquo; (depending on context), vinyl icon is &ldquo;Album&rdquo;, label icon is &ldquo;Genre&rdquo;, music list icon is current track length and queue information and the chip icon is abbreviated file format details. Multi-value tags are supported. Tag your music library with <a href="https://xiph.org/vorbis/doc/v-comment.html">the recommended Vorbis tags</a> for best results. In particular for classical music use &ldquo;artist&rdquo; (or &ldquo;composer&rdquo;) for the composer and &ldquo;performer&rdquo; for the orchestra/conductor/players.</p>
+<p>Top row controls are mostly obvious but the last three buttons are Appearance, Server Settings and &ldquo;About&rdquo; screen. Track title is first, then other information (which scrolls vertically if there isn&rsquo;t enough space). There are 5 font themes and 7 colour themes giving 35 possible looks. The font size is set to be clearly legible from about 4 metres (12 feet) by default but can be tuned up and down for different distances and screen sizes. As well as the control buttons, tapping on the centre half of the title toggles pause, tapping left or right skips to the previous or next track.</p>
+<p>Below the title is secondary information, the quill on paper icon means &ldquo;Composer&rdquo;, person icon is &ldquo;Performer&rdquo; or &ldquo;Artist&rdquo; (depending on context), vinyl icon is &ldquo;Album&rdquo;, label icon is &ldquo;Genre&rdquo;, playlist icon is current track length and queue information and the chip icon is abbreviated file format details. As well as scrolling automatically you can swipe the secondary information manually.</p>
+<p>Multi-value tags are supported. Tag your music library with <a href="https://xiph.org/vorbis/doc/v-comment.html">the recommended Vorbis tags</a> for best results. In particular for classical music use &ldquo;artist&rdquo; (or &ldquo;composer&rdquo;) for the composer and &ldquo;performer&rdquo; for the orchestra/conductor/players.</p>
 <p>Although the screenshots above are from a 7&quot; Kindle Fire any Android tablet <a href="https://docs.flutter.dev/reference/supported-platforms">supported by Flutter</a> should work (&gt;= Android 5, although &gt;= 4.4 might work). Larger tablets will work fine. Smaller devices like phones will also work but will be harder to read at a distance, so adjust the font size to suit and have good enough eyesight.</p>
 <p>The app works best if you put the tablet in developer mode, connect it to the Raspberry Pi/computer, and use a supplied script to automatically unlock the screen and launch the app when playback begins. Here&rsquo;s an overview diagram for moOde:
 <figure><img src="/img/mpd-display-diagram.png"
@@ -138,11 +120,11 @@
 <h2 id="setup-summary">Setup Summary</h2>
 <ul>
 <li>Factory-reset your tablet and when you set it up and connect it to WiFi don&rsquo;t use any important accounts, especially not your main Google (or Amazon) account. Create a dummy account if required. This is because the wakeup script must be able to unlock the device without interaction. If it or the Raspberry Pi are stolen your accounts will be compromised.</li>
-<li>Set the tablet display timeout to your preference. While playing MPD Display will keep the screen turned on so this mainly affects how long until the screen turns off when you pause or stop playback.</li>
+<li>Set the tablet display sleep time to your preference. <em>MPD Display</em> will keep the screen turned on while playing, the sleep time starts counting when you pause or stop playback.</li>
 <li>Enable developer mode on the tablet. <a href="https://developer.android.com/studio/debug/dev-options">Generic Android Instructions</a> / <a href="https://developer.amazon.com/docs/fire-tablets/connecting-adb-to-device.html#step-1-enable-developer-options">Kindle Fire instructions</a>. Don&rsquo;t connect the tablet to USB yet.</li>
 <li>If possible, <a href="https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address">assign a static IP</a> to your Raspberry Pi on your router, then reboot it. This improves the chances that the tablet will always be able to find it on the network.</li>
 <li>Enable SSH on the Raspberry Pi. This is enabled by default in moOde, with <a href="https://github.com/moode-player/moode/blob/master/www/setup.txt">a default username and password</a>. It must be <a href="https://phoenixnap.com/kb/enable-ssh-raspberry-pi">manually enabled on Raspbian</a>. For all other Linux systems it is almost certainly enabled by default.</li>
-<li>Figure out the default username and password. For moOde this is <code>pi</code> and <code>moodeaudio</code>. The rest of this document assumes you&rsquo;re using moOde. Adjust instructions and script if your setup is different.</li>
+<li>Figure out the default username and password. For moOde this is <code>pi</code> and <code>moodeaudio</code>. The rest of these instructions assume you&rsquo;re using moOde. Adjust instructions and script if your setup is different.</li>
 <li>SSH to the <code>pi</code> user on the Raspberry Pi and install the <a href="https://developer.android.com/studio/command-line/adb">Android Debug Bridge</a>: <code>sudo apt install adb</code>.</li>
 <li><a href="https://developer.android.com/studio/command-line/adb#Enabling">Enable adb debugging</a> on the tablet.</li>
 <li>Connect the tablet to the Raspberry Pi with the USB cable. A notification or dialog will appear asking you to authorize the Raspberry Pi. Be sure you authorize it before proceeding.</li>
@@ -153,10 +135,11 @@ List of devices attached
 GCC0X010101010M8       device usb:1-1.2 product:mustang model:KFMUWI device:mustang transport_id:9
 </code></pre><ul>
 <li>Copy the app APK file to the <code>pi</code> user then install it to the tablet: <code>adb install mpd-display-0.2.apk</code>.</li>
-<li>Manually open MPD Display on the tablet. By default it will try to connect to a server called &ldquo;music&rdquo; on the default port of 6600. Your Raspberry Pi will likely have a different name or IP address. Tap the connection button top-right and enter the correct name or IP address. You probably won&rsquo;t need to change the port number from the default (6600). MPD Display should connect within a few seconds. If your player is stopped with an empty queue it will show only the server name. If it is paused or playing you&rsquo;ll see the current track.</li>
+<li>Manually open MPD Display on the tablet. By default it will try to connect to a server called &ldquo;music&rdquo; on the default port of 6600. Your Raspberry Pi will likely have a different name or IP address. Tap the connection button top-right and enter the correct name or IP address. You probably won&rsquo;t need to change the port number from the default (6600). MPD Display should connect within a few seconds. If your player is stopped with an empty queue it will show only the server details. If it is paused or playing you&rsquo;ll see the current track.</li>
 <li>Make sure your player is paused or stopped then copy the wake-up script installer to the <code>pi</code> user and run it: <code>bash install-wakeup-mpd</code>. This will install the script, a systemd service to control it, and enable and start the service. By default the script assumes no password, and a swipe from bottom to top to unlock the display. You may have to edit the script to set the correct actions for your tablet. A fairly easy way to edit it is with <code>nano /home/pi/wakeup-mpd-display.sh</code>. Once you are finished editing run <code>systemctl --user restart wakeup-mpd-display</code>.</li>
 <li>With the tablet connected by USB, start playback using your phone or computer. Within a couple of seconds the tablet screen should unlock and the app will start. <code>adb</code> can be a bit flaky sometimes so the script sometimes doesn&rsquo;t work. Any suggestions on how to improve reliability are welcome.</li>
 </ul>
+<p>If you run into problems I&rsquo;ll try to help: <a href="mailto:apps@joat.me">apps@joat.me</a></p>
 <p>The source code is <a href="https://github.com/joatca/mpd-display">on Github</a>.</p>
 
 </div>
