@@ -5,7 +5,7 @@
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.111.3">
+  <meta name="generator" content="Hugo 0.116.1">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -136,6 +136,7 @@ GCC0X010101010M8       device usb:1-1.2 product:mustang model:KFMUWI device:must
 <li>Copy the app APK file to the <code>pi</code> user then install it to the tablet: <code>adb install mpd-display-0.3.apk</code>.</li>
 <li>Manually open MPD Display on the tablet. By default it will try to connect to a server called &ldquo;music&rdquo; on the default port of 6600. Your Raspberry Pi will likely have a different name or IP address. Tap the connection button top-right and enter the correct name or IP address. You probably won&rsquo;t need to change the port number from the default (6600). MPD Display should connect within a few seconds. If your player is stopped with an empty queue it will show only the server details. If it is paused or playing you&rsquo;ll see the current track.</li>
 <li>Make sure your player is paused or stopped then copy the wake-up script installer to the <code>pi</code> user and run it: <code>bash install-wakeup-mpd</code>. This will install the script, a systemd service to control it, and enable and start the service. By default the script assumes no password, and a swipe from bottom to top to unlock the display. You may have to edit the script to set the correct actions for your tablet. A fairly easy way to edit it is with <code>nano /home/pi/wakeup-mpd-display.sh</code>. Once you are finished editing run <code>systemctl --user restart wakeup-mpd-display</code>.</li>
+<li>Ensure that it starts at boot time with <code>sudo loginctl enable-linger pi</code> - otherwise it won&rsquo;t start unless you log in via SSH.</li>
 <li>With the tablet connected by USB, start playback using your phone or computer. Within a couple of seconds the tablet screen should unlock and the app will start. <code>adb</code> can be a bit flaky sometimes so the script sometimes doesn&rsquo;t work. Any suggestions on how to improve reliability are welcome.</li>
 </ul>
 <p>If you run into problems I&rsquo;ll try to help: <a href="mailto:apps@joat.me">apps@joat.me</a></p>
