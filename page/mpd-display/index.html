@@ -76,34 +76,34 @@
   
   <p><em>This page describes version 0.4</em></p>
 <h2 id="introduction">Introduction</h2>
+<p>Do you&hellip;</p>
 <ul>
-<li>Play music or stream radio on <a href="https://moodeaudio.org/">moOde audio</a> (or other <a href="https://www.musicpd.org/">MPD</a>-based music server)?</li>
-<li>Miss seeing what&rsquo;s playing without having to look at your phone?</li>
-<li>Have an unused Android tablet or phone, or able to buy an entry-level tablet?</li>
+<li>play music or stream radio on <a href="https://moodeaudio.org/">moOde audio</a> (or other <a href="https://www.musicpd.org/">MPD</a>-based music server)?</li>
+<li>want to see what&rsquo;s playing without having to look at your phone?</li>
+<li>have an unused Android tablet or phone, or budget to buy an entry-level tablet?</li>
 </ul>
 <p><em>MPD Display</em> is a &ldquo;now playing&rdquo; screen:</p>
 <ul>
 <li>simpler and cheaper than building a Raspberry Pi with a built-in screen</li>
-<li>much cheaper than a dedicated music streamer</li>
+<li>much cheaper and easier to read than a commercial music streamer</li>
 <li>more power-efficient than playing from your TV or computer</li>
-<li>more elegant than all of those options.</li>
 </ul>
-<p>No assembly required other than connecting a USB cable and placing the tablet on a stand, and only some minor technical fiddling to make it work automatically.</p>
-<p>This is what it looks like on the author&rsquo;s <a href="https://www.amazon.com/Amazon-Fire-Tablet-Family/b?ie=UTF8&amp;node=6669703011">7&quot; Kindle Fire</a> playing a track from a local library, however the animation is a lot smoother than this GIF image and it looks much nicer when the tablet is on top of your stereo cabinet.</p>
+<p>No assembly required other than connecting a USB cable and placing the tablet on a stand, and some minor technical fiddling to make it work automatically.</p>
+<p>This is what it looks like on the author&rsquo;s <a href="https://www.amazon.com/Amazon-Fire-Tablet-Family/b?ie=UTF8&amp;node=6669703011">7&quot; Kindle Fire</a> while moOde is playing a track from a local library, however the animation is a lot smoother than this GIF image and it looks much nicer when the tablet is beside your stereo equipment.</p>
 <figure><img src="/img/mpdd.gif"
-         alt="Baroque font style with Gold colour theme"/><figcaption>
-            <p>Baroque font style with Gold colour theme</p>
+         alt="Renaissance font style with Gold colour theme"/><figcaption>
+            <p>Renaissance font style with Gold colour theme</p>
         </figcaption>
 </figure>
 
 <p>The design philosophy is:</p>
 <ul>
 <li>Show what&rsquo;s playing, readable at a distance</li>
-<li>Fit elegantly into a stereo rack</li>
-<li>No horizontal &ldquo;marquee&rdquo; scrolling</li>
-<li>No album art</li>
+<li>Integrate elegantly beside your player and speakers</li>
+<li>Avoid horizontal &ldquo;marquee&rdquo; scrolling</li>
+<li>Avoid album art</li>
 </ul>
-<p>The top row has playback controls and settings, the information below the title scrolls vertically if there isn&rsquo;t enough space. There are 5 font themes and 7 colour themes giving 35 possible looks. The font size is set to be clearly legible from about 4 metres (12 feet) by default but can be tuned up and down for different distances and screen sizes. As well as the control buttons, tapping on the centre half of the title toggles pause, tapping left or right skips to the previous or next track.</p>
+<p>The top row has playback controls and settings, the information below the title scrolls vertically if there isn&rsquo;t enough space. Scrolling is timed by word, not by line. There are 8 font themes and 7 colour themes giving 56 possible looks. The font size is set to be clearly legible from about 4 metres (12 feet) by default but can be tuned up and down for different distances and screen sizes. As well as the control buttons, tapping on the centre half of the title toggles pause, tapping left or right skips to the previous or next track.</p>
 <p>Multi-value tags are supported. Tag your music library with <a href="https://xiph.org/vorbis/doc/v-comment.html">the recommended Vorbis tags</a> for best results. In particular for classical music use <code>artist</code> (or <code>composer</code>) for the composer and <code>performer</code> for the orchestra/conductor/players. <code>albumartist</code> is also supported and duplicates are removed so it&rsquo;s safe to set all three.</p>
 <p>Any tablet with Android 5 or newer should work, possibly even 4.4 (technically any Android version <a href="https://docs.flutter.dev/reference/supported-platforms">supported by Flutter</a>). Larger screens will work fine. Smaller phone screens will show cropped long titles at readable font sizes, so adjust the font size to suit. E-ink screens will not work well.</p>
 <p>The app works best if you put the tablet in developer mode, connect it by USB to the Raspberry Pi/computer, and use the supplied script to automatically unlock the screen and launch the app when playback begins. Here&rsquo;s an overview diagram for moOde:
@@ -116,7 +116,7 @@
 <h2 id="required-hardware">Required Hardware</h2>
 <ul>
 <li>A Raspberry Pi running moOdeaudio or other computer running MPD.</li>
-<li>A tablet (or phone).</li>
+<li>A tablet (or phone). If you don&rsquo;t have one, see the bottom of this page.</li>
 <li>A WiFi connection that allows connection to moOde.</li>
 <li>A USB charge/sync cable compatible with your tablet (this both keeps the tablet charged and unlocks the screen automatically when playback starts)</li>
 <li>A tablet stand. The author uses <a href="https://www.amazon.ca/gp/product/B07B8J2Y4F/">one of these</a> but anything that can hold the tablet in a readable position is fine.</li>
@@ -148,6 +148,9 @@ GCC0X010101010M8       device usb:1-1.2 product:mustang model:KFMUWI device:must
 </ul>
 <p>If you run into problems I&rsquo;ll try to help: <a href="mailto:apps@joat.me">apps@joat.me</a></p>
 <p>The source code is <a href="https://github.com/joatca/mpd-display">on Github</a>.</p>
+<h2 id="notes-on-buying-a-tablet">Notes on Buying a Tablet</h2>
+<p>Ideally you can re-use an old tablet or phone for use with MPD Display or find one on the used market, but if not you&rsquo;ll need to buy a new one. A 7&quot; (18cm) screen is almost always large enough. In most markets Amazon&rsquo;s Kindle Fire 7 will be the cheapest option and can be found on sale for under C$60 / US$50 / €40 / £50 and just a little more for a cable and stand. That&rsquo;s cheaper than buying a Raspberry Pi touchscreen even before adding the cost of a case and additional hardware. A Fire 7 is barely acceptable as a normal tablet and doesn&rsquo;t have Google services but for dedicated use with MPD Display it is absolutely fine.</p>
+<p>If you can&rsquo;t get a Fire 7 (or you want to avoid dealing with Amazon at all) really almost any other tablet will work, subject to the minimum Android versions noted above. A fairly low-resolution, low-contrast screen is perfectly acceptable - it will mostly be read at a distance and display high-contrast text so a full HD or 4K screen (or OLED) is a waste. Remember that at normal TV viewing distances the apparent pixel density of a 7-inch 720p screen is much higher than an 8K 75-inch TV, so don&rsquo;t spend money on a tablet with a better screen unless you plan to use the tablet for other things (and don&rsquo;t do that, for the reasons above). The only thing to check is whether the tablet can be put into development mode. Without development mode the automatic screen unlocking script won&rsquo;t work and it&rsquo;ll be painful to use.</p>
 
 </div>
     </main>
