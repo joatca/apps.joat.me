@@ -15,7 +15,7 @@
       <guid>https://apps.joat.me/page/about/</guid>
       <description>This site documents my apps, written as hobby projects. All are open source and I don&amp;rsquo;t make money from them. The page also hosts my Privacy Policy, which is required for apps to be listed in most app stores.
 Technical notes This website was built using Hugo with the Hyde theme, and is hosted by Github Pages
-Site last updated 2023-08-27 11:31:32 -0400 </description>
+Site last updated 2023-09-03 20:00:21 -0400 </description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ Site last updated 2023-08-27 11:31:32 -0400 </description>
       <pubDate>Thu, 11 May 2023 20:52:30 -0500</pubDate>
       
       <guid>https://apps.joat.me/page/mpd-display/</guid>
-      <description>This page describes version 0.3
+      <description>This page describes version 0.4
 Introduction Do you play your music collection or stream radio stations on the moOde audio player (or any other MPD-based music server)? Do you miss being able to see what&amp;rsquo;s playing on a display in your stereo rack without having to look at your phone? Do you have an unused Android tablet or phone gathering dust, or the budget to buy a cheap, entry-level tablet? Use MPD Display as a &amp;ldquo;now playing&amp;rdquo; screen, simpler and cheaper than building a Raspberry Pi with a built-in screen, much cheaper than a dedicated music streamer, more power-efficient than playing from your TV or computer, and more elegant than all of those options.</description>
     </item>
     

@@ -74,7 +74,7 @@
     <div class="post">
   <h1>MPD Display</h1>
   
-  <p><em>This page describes version 0.3</em></p>
+  <p><em>This page describes version 0.4</em></p>
 <h2 id="introduction">Introduction</h2>
 <ul>
 <li>Do you play your music collection or stream radio stations on the <a href="https://moodeaudio.org/">moOde audio player</a> (or any other <a href="https://www.musicpd.org/">MPD</a>-based music server)?</li>
@@ -115,7 +115,7 @@
 <li>A tablet stand. The author uses <a href="https://www.amazon.ca/gp/product/B07B8J2Y4F/">one of these</a> but anything that can hold the tablet in a readable position is fine.</li>
 </ul>
 <h2 id="required-software">Required Software</h2>
-<p>The APK file and wakeup script installer discussed below, as well as the full source code, can be downloaded from the <a href="https://github.com/joatca/mpd-display/releases/tag/v0.3">release page for version 0.3</a>.</p>
+<p>The APK file and wakeup script installer discussed below, as well as the full source code, can be downloaded from the <a href="https://github.com/joatca/mpd-display/releases/tag/v0.4">release page for version 0.4</a>.</p>
 <h2 id="setup-summary">Setup Summary</h2>
 <ul>
 <li>Factory-reset your tablet and when you set it up and connect it to WiFi don&rsquo;t use any important accounts, especially not your main Google (or Amazon) account. Create a dummy account if required. This is because the wakeup script must be able to unlock the device without interaction. If it or the Raspberry Pi are stolen your accounts will be compromised.</li>
@@ -133,7 +133,7 @@
 List of devices attached
 GCC0X010101010M8       device usb:1-1.2 product:mustang model:KFMUWI device:mustang transport_id:9
 </code></pre><ul>
-<li>Copy the app APK file to the <code>pi</code> user then install it to the tablet: <code>adb install mpd-display-0.3.apk</code>.</li>
+<li>Copy the app APK file to the <code>pi</code> user then install it to the tablet: <code>adb install mpd-display-0.4.apk</code>.</li>
 <li>Manually open MPD Display on the tablet. By default it will try to connect to a server called &ldquo;music&rdquo; on the default port of 6600. Your Raspberry Pi will likely have a different name or IP address. Tap the connection button top-right and enter the correct name or IP address. You probably won&rsquo;t need to change the port number from the default (6600). MPD Display should connect within a few seconds. If your player is stopped with an empty queue it will show only the server details. If it is paused or playing you&rsquo;ll see the current track.</li>
 <li>Make sure your player is paused or stopped then copy the wake-up script installer to the <code>pi</code> user and run it: <code>bash install-wakeup-mpd</code>. This will install the script, a systemd service to control it, and enable and start the service. By default the script assumes no password, and a swipe from bottom to top to unlock the display. You may have to edit the script to set the correct actions for your tablet. A fairly easy way to edit it is with <code>nano /home/pi/wakeup-mpd-display.sh</code>. Once you are finished editing run <code>systemctl --user restart wakeup-mpd-display</code>.</li>
 <li>Ensure that it starts at boot time with <code>sudo loginctl enable-linger pi</code> - otherwise it won&rsquo;t start unless you log in via SSH.</li>
